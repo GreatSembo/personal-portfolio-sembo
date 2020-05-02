@@ -1,0 +1,63 @@
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 392.09 354.52">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-5 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke: #6acc7d;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-miterlimit: 9;
+      }
+
+      .cls-1 {
+        stroke-width: 18px;
+      }
+
+      .cls-2 {
+        stroke-width: 9px;
+      }
+
+      .cls-3 {
+        stroke-linecap: square;
+      }
+
+      .cls-3, .cls-4 {
+        stroke-width: 7px;
+      }
+
+      .cls-4 {
+        fill: #6acc7d;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5, .cls-6 {
+        stroke: #ff971f;
+        stroke-linecap: round;
+        stroke-width: 19px;
+      }
+
+      .cls-6 {
+        fill: #ff971f;
+      }
+    </style>
+  </defs>
+  <title>Artboard 1</title>
+  <g>
+    <path class="cls-1" d="M319.21,118.12C270.35,140,220.35,159,171.5,180l2.66.1c-.89,0-1.77-.08-2.66-.1,59.85,3.92,119.85,3.92,179.86,7a13.81,13.81,0,0,1-1.33.55l1.33-.55c-24,8.89-46,19.89-70,29.89-45,18-88.54,37-133,56-7.4,3.15-94,39-129,53.39"/>
+    <path class="cls-2" d="M319.84,117.74l-12,5.45"/>
+    <g>
+      <path class="cls-3" d="M325,115.61l-9.35,4.09"/>
+      <polygon class="cls-4" points="320.43 112.73 337.52 110.14 324.02 120.93 320.43 112.73"/>
+    </g>
+  </g>
+  <path class="cls-5" d="M199.39,14.58,178.94,50q-34.77,60.22-69.55,120.45l-90,155.89h360"/>
+  <path class="cls-6" d="M201.14,14.85V47.79l-3,1.73L169.61,33.06V29.59l28.53-16.47Z"/>
+  <path class="cls-6" d="M379.39,328.08l-28.52,16.47-3-1.73V309.88l3-1.73,28.52,16.47Z"/>
+</svg>
