@@ -13,6 +13,8 @@ import Testimonial from "../components/testimonial";
 import Contact from "../components/contact";
 import Photos from "../components/photos";
 import { injectIntl, FormattedMessage } from "gatsby-plugin-intl"
+import Zoom from 'react-reveal/Zoom';
+import Rotate from 'react-reveal/Rotate';
 
 const IndexPage = ({ data }) => (
   <Layout header="home">
@@ -25,7 +27,7 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "About")
       .map(t => {
-        return <About data={data.contentfulAboutMe}></About>;
+        return (<Zoom><About data={data.contentfulAboutMe}></About></Zoom>);
       })}
 
     {data.contentfulSiteInformation.menus
@@ -37,27 +39,29 @@ const IndexPage = ({ data }) => (
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Blogs")
       .map(t => {
-        return <Blogs data={data.allContentfulBlogs}></Blogs>;
+        return (<Rotate bottom left >
+          <Blogs data={data.allContentfulBlogs}></Blogs>;
+          </Rotate>)
       })}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Work")
       .map(t => {
-        return <Work data={data.allContentfulWorks}></Work>;
+        return (<Rotate bottom right><Work data={data.allContentfulWorks}></Work></Rotate>);
       })}
 
-    {data.contentfulSiteInformation.menus
+    {/* {data.contentfulSiteInformation.menus
       .filter(item => item === "Testimonials")
       .map(t => {
         return (
           <Testimonial data={data.allContentfulTestimonials}></Testimonial>
         );
-      })}
+      })} */}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === "Photos")
       .map(t => {
-        return <Photos data={data.contentfulPhotos}></Photos>;
+        return (<Rotate bottom left><Photos data={data.contentfulPhotos}></Photos></Rotate>);
       })}
 
     {data.contentfulSiteInformation.menus

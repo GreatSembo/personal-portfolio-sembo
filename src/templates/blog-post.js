@@ -29,7 +29,7 @@ export default class blogPost extends Component {
     };
 
     return (
-      <Layout>
+      <Layout header='home'>
         <SEO
           title={data.title}
           keywords={[
@@ -106,6 +106,8 @@ export const pageQuery = graphql`
     contentfulSiteInformation {
       siteUrl
       twiteerHandle
+      menus
     }
+    
   }
 `;

@@ -11,7 +11,7 @@ export default class Blogs extends Component {
   render() {
     const { data } = this.props;
     return (
-      <Layout>
+      <Layout header='home'>
         <SEO
           title="Blogs"
           keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`, `Blogs`]}

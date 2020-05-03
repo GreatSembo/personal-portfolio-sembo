@@ -10,6 +10,7 @@
     "welcome_page2": "Bienvenue sur la page 2",
     "go_back": "Retour à la page d'accueil",
     "footer_build": "Construit avec",
+    "iam":"Io sono",
     "notfound": {
         "header": "NOT FOUND",
         "description": "Vous voulez accéder à une route qui n'existe pas..."

@@ -10,6 +10,7 @@
     "welcome_page2": "Welcome to page 2",
     "go_back": "Go back to the homepage",
     "footer_build": "Built with",
+    "iam":"I'm a",
     "notfound": {
         "header": "NOT FOUND",
         "description": "You just hit a route that doesn't exist... the sadness."

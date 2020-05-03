@@ -16,7 +16,7 @@ a:hover{color:#d83d0a;text-decoration:underline}
 body{margin:0;background:#fafafe}
 .banner .banner-details span{font-size:25px;margin-bottom:20px;text-shadow:1px 1px 4px #333}
 .banner .banner-details h1{font-size:60px;margin-top:0;margin-bottom:20px;text-align:center;text-shadow:1px 1px 4px #333}
-.banner:after{content:"";background:rgba(0,0,0,0.55);position:absolute;left:0;right:0;top:0;bottom:0}
+/* .banner:after{content:"";background:rgba(0,0,0,0.55);position:absolute;left:0;right:0;top:0;bottom:0} */
 .banner .banner-details .sub-data{padding:0;display:flex;list-style:none;margin:0 0 30px 0}
 .banner .banner-details .sub-data li{padding:0 15px;position:relative;font-size:18px;text-shadow:1px 1px 4px #333}
 .banner .banner-details .sub-data li:after{content:"";width:6px;height:6px;display:inline-block;background:#fff;position:absolute;top:50%;margin-top:-3px;right:-3px;border-radius:50%}
@@ -153,6 +153,19 @@ h2:after,
 .rg-popup .popup-layer{position:fixed;top:0;bottom:0;left:0;right:0;height:100%;width:100%;background:#000000c9;cursor:pointer}
 .rg-popup .popup-inner img{width:100%;height:auto;max-width:100%}
 .rg-popup i.fas{position:absolute;top:10px;right:10px;background:#333333bd;color:#fff;padding:5px 7px;cursor:pointer}
+.tomato-center{margin:0px auto 10px auto; width: 200px;height: 150px;display: block;}
+#tsparticles{height: 100%;}
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #b61924;
+    background-image: url("");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    
+  }
 @-webkit-keyframes zoomIn{
     0%{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}
     50%{opacity:1}

@@ -14,7 +14,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-remove-trailing-slashes`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -50,12 +49,21 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/intl`,
         // supported language
-        languages: [`en-US`, `it`],
+        languages: [`en`, `it`],
         // language file path
         defaultLanguage: `it`,
         // option to redirect to `/en` when connecting `/`
         redirect: true,
       },
-    }
+    },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"), // Optional: Load custom Tailwind CSS configuration
+        ],
+      },
+    },
   ]
 };

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Zoom from 'react-reveal/Zoom';
 export default class service extends Component {
   render() {
     const { data } = this.props;
@@ -12,6 +12,7 @@ export default class service extends Component {
           <div className="row">
             {data.edges.map((item, index) => {
               return (
+                <Zoom>
                 <div key={index} className="col-md-4 mb-3">
                   <div className="service-main">
                     <h3>{item.node.title}</h3>
@@ -22,6 +23,7 @@ export default class service extends Component {
                     />
                   </div>
                 </div>
+                </Zoom>
               );
             })}
           </div>

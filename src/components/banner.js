@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
+import ParticlesBackground from "./particles";
 
 export default class Banner extends Component {
   render() {
     const { data } = this.props;
     return (
       <div className="banner">
-        <Img
+        <ParticlesBackground/>
+        {/* <Img
           fixed={data.bannerImage.fluid}
           objectFit="cover"
           objectPosition="50% 50%"
-        />
+        /> */}
         <div className="container">
           <div className="banner-details">
-            <span>Hello...</span>
-            <h1>I'm {data.designation}.</h1>
+            <span>Hey</span>
+            <h1>I'm a {data.designation}.</h1>
             <ul className="sub-data">
               {data.bannerList.map((item, index) => {
                 return <li key={index}>{item}</li>;
@@ -29,14 +31,14 @@ export default class Banner extends Component {
                   rel="noopener noreferrer"
                 ></a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   className="fab fa-twitter"
                   href={data.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                 ></a>
-              </li>
+              </li> */}
               <li>
                 <a
                   className="fab fa-instagram"

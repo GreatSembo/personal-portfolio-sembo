@@ -13,7 +13,7 @@ export default class Header extends Component {
     const { data, header } = this.props;
     const { menu } = this.state;
     console.log(navigator.language)
-    const currentLang=window.location.pathname.includes("it")?"it":"en-US"
+    const currentLang=window.location.pathname.includes("it")?"it":"en"
     return (
       <header className={`site-header ${menu ? "active" : ""}`}>
         <div className="container">
@@ -47,7 +47,7 @@ export default class Header extends Component {
                   }}
                 >
                   <li>
-                    <Link to="${currentLang}/#home">Home</Link>
+                    <Link to={`${currentLang}/#home`}>Home</Link>
                   </li>
                   {data.menus
                     .filter(item => item === "About")
