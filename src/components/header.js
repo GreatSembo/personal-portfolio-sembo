@@ -10,9 +10,9 @@ export default class Header extends Component {
   }
 
   render() {
-    const { data, header } = this.props;
+    const { data, header,locale } = this.props;
     const { menu } = this.state;
-    console.log(navigator.language)
+    console.log(locale)
     const currentLang=window.location.pathname.includes("it")?"it":"en"
     return (
       <header className={`site-header ${menu ? "active" : ""}`}>
@@ -47,14 +47,14 @@ export default class Header extends Component {
                   }}
                 >
                   <li>
-                    <Link to={`${currentLang}/#home`}>Home</Link>
+                    <Link to={`/${currentLang}/#home`}>Home</Link>
                   </li>
                   {data.menus
                     .filter(item => item === "About")
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`${currentLang}/#About`}>About</Link>
+                          <Link to={`/${currentLang}/#About`}>About</Link>
                         </li>
                       );
                     })}
@@ -63,7 +63,7 @@ export default class Header extends Component {
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`${currentLang}/#Service`}>Service</Link>
+                          <Link to={`/${currentLang}/#Service`}>Service</Link>
                         </li>
                       );
                     })}
@@ -72,7 +72,7 @@ export default class Header extends Component {
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`${currentLang}/#Blogs`}>Blogs</Link>
+                          <Link to={`/${currentLang}/#Blogs`}>Blogs</Link>
                         </li>
                       );
                     })}
@@ -82,7 +82,7 @@ export default class Header extends Component {
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`${currentLang}/#Work`}>Work</Link>
+                          <Link to={`/${currentLang}/#Work`}>Work</Link>
                         </li>
                       );
                     })}
@@ -91,7 +91,7 @@ export default class Header extends Component {
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`${currentLang}/#Testimonials`}>Testimonials</Link>
+                          <Link to={`/${currentLang}/#Testimonials`}>Testimonials</Link>
                         </li>
                       );
                     })}
@@ -100,7 +100,7 @@ export default class Header extends Component {
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`${currentLang}/#Photos`}>Photos</Link>
+                          <Link to={`/${currentLang}/#Photos`}>Photos</Link>
                         </li>
                       );
                     })}
@@ -109,7 +109,7 @@ export default class Header extends Component {
                     .map(t => {
                       return (
                         <li>
-                          <Link to={`${currentLang}/#Contact`}>Contact</Link>
+                          <Link to={`/${currentLang}/#Contact`}>Contact</Link>
                         </li>
                       );
                     })}

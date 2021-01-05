@@ -9,7 +9,8 @@ import { Notifications } from 'react-push-notification';
 import addNotification from 'react-push-notification';
 import ParticleComponent from "../components/particles";
 import Zoom from 'react-reveal/Zoom';
-import { AnimateOnChange } from 'react-animation'
+// import { AnimateOnChange } from 'react-animation'
+import {useTransition, animated} from 'react-spring'
 const TomatoTime = (props) => {
   const [pomodoroOpen, setpomodoroOpen] = useState(true)
   const [shortBreakOpen, setShortBreakOpen] = useState(false)
@@ -18,7 +19,11 @@ const TomatoTime = (props) => {
   const [intervalTimer, setintervalTimer] = useState()
   let secondsRemaining
   var intervalHandle;
-
+  const transitions = useTransition(seconds, null, {
+    from: {opacity:0 },
+    enter: {display:"inline-block", opacity:1},//,"animation-name": "example","animation-duration": "1s"
+    leave:{display:"none", opacity:0}
+        })
   function tick() {
     var min = Math.floor(secondsRemaining / 60);
     var sec = secondsRemaining - (min * 60);
@@ -111,20 +116,26 @@ const TomatoTime = (props) => {
 
                 <div>
                   <h1 className="text-6xl">
-                    <AnimateOnChange
+                    {/* <AnimateOnChange
                     animationIn="bounceIn"
                     animationOut="bounceOut"
                     durationOut={500}
-                  >
+                  > */}
                     {value}
-                  </AnimateOnChange>:
-                  <AnimateOnChange
+                  {/* </AnimateOnChange> */}
+                  :
+                  {/* {seconds} */}
+                  {transitions.map(({ item, key, props }) =>
+                    item && <animated.div key={key} style={props}>{item}</animated.div>
+                    )}
+                  {/* <AnimateOnChange
                     animationIn="bounceIn"
                     animationOut="bounceOut"
                     durationOut={500}
                   >
                   {seconds}
-                  </AnimateOnChange></h1>
+                  </AnimateOnChange> */}
+                  </h1>
                 </div>
                 {pomodoroOpen &&
                   <div className='mb-8'>

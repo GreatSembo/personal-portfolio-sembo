@@ -18,11 +18,11 @@ export default class blogPost extends Component {
     };
 
     const siteurl = this.props.data.contentfulSiteInformation.siteUrl + "/";
-    const twiteerhandle = this.props.data.contentfulSiteInformation
+    const twitterHandle = this.props.data.contentfulSiteInformation
       .twiteerHandle;
     const socialConfigss = {
       site: {
-        siteMetadata: { siteurl, twiteerhandle }
+        siteMetadata: { siteurl, twitterHandle }
       },
       title: data.title,
       slug: data.slug
@@ -107,6 +107,7 @@ export const pageQuery = graphql`
       siteUrl
       twiteerHandle
       menus
+      
     }
     
   }
